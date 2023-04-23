@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+    form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+label {
+  font-size: 26px;
+  margin-right: 10px;
+}
+
+input[type=text] {
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 10px;
+}
+
+select {
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 10px;
+}
+
+button[type=submit] {
+  font-size: 24px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
+<body>
+  <div>
+    <form action="{{ url_for("ticker") }}" method="post">
+        <label for="Ticker">Ticker:</label>
+        <select name="ticker" id="ticker">
+          <option value="AAPL">AAPL</option>
+          <option value="GOOGL">GOOGL</option>
+          <option value="MSFT">MSFT</option>
+          <option value="AMZN">AMZN</option>
+          <option value="AMZN">COST</option>
+          <option value="AMZN">MCK</option>
+          <option value="AMZN">TSLA</option>
+          <option value="AMZN">UNH</option>
+          <option value="AMZN">WMT</option>
+          <option value="AMZN">XOM</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
